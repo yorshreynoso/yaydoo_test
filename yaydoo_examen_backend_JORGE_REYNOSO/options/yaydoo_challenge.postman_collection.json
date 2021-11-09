@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "973867ae-0562-49fb-acf6-27ea012dc428",
+		"name": "yaydoo_challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"newUser@mail.com\",\n    \"password\":\"THEPASSWORD\",\n    \"name\": \"this is my name\"\n\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/createUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/getAllUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/getUserByEmail/newUser@mail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getUserByEmail",
+						"newUser@mail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit and update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"este es mi nuevo nombre\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/edit/618a8fae65377657a257452c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"edit",
+						"618a8fae65377657a257452c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -19,7 +19,6 @@ app.use('/', (req, res) => {
     res.status(404).json({message: "La url no existe, please verify that your main url is localhost:3000/api/"});
 });
 
-
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
